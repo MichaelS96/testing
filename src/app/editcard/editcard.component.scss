@@ -29,51 +29,37 @@ section {
     overflow-x: auto;
 }
 
-input {
+input,
+textarea,
+select {
     width: 98%;
-    height: 30px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 16px;
     outline: none;
-    border: 1px solid;
-    border-color: black;
+    border: 1px solid black;
     cursor: pointer;
     color: black;
     margin-bottom: 20px;
 }
 
+input {
+    height: 30px;
+}
+
 textarea {
-    width: 98%;
     height: 125px;
     font-size: 24px;
-    outline: none;
-    border: 1px solid;
-    border-color: black;
-    cursor: pointer;
-    color: black;
-    border-radius: 8px;
     resize: none;
 }
 
 select {
-    width: 98%;
     height: 25px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid;
-    border-color: black;
-    cursor: pointer;
-    color: black;
-    border-radius: 8px;
-    resize: none;
 }
 
 option {
     font-size: 14px;
 }
-
-
 
 .input-field {
     margin-bottom: 20px;
@@ -127,8 +113,7 @@ option {
     background-color: #fff;
     border-radius: 8px;
     padding: 8px 0 8px 8px;
-    border: 1px solid;
-
+    border: 1px solid black;
 
     input {
         flex: 1;
@@ -154,26 +139,56 @@ option {
 .ok-btn-container {
     display: flex;
     justify-content: flex-end;
+
+    .ok-btn {
+        background-color: blue;
+        color: white;
+        padding: 10px 18px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 24px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ok-btn:hover {
+        animation-timing-function: ease-in-out;
+        animation-duration: 100ms;
+    }
 }
 
-.ok-btn {
-    background-color: blue;
-    color: white;
-    padding: 10px 18px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: black;
+    opacity: 1;
 }
 
-.ok-btn:hover {
-    animation-timing-function: ease-in-out;
-    animation-duration: 100ms;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+    color: black;
+}
 
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+select:-moz-placeholder {
+    color: black;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+    color: black;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+    color: black;
 }
