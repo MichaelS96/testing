@@ -191,3 +191,143 @@ textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+/* Dropdown */
+.selected-contact {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10px;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.selected-contact:hover {
+    background-color: #f0f0f0;
+}
+
+.selected-contact svg {
+    margin-left: auto;
+}
+
+.dropdown-options {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Achte darauf, dass das Dropdown über anderen Elementen liegt */
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    /* optional: um ein Scrollen zu ermöglichen, wenn zu viele Optionen da sind */
+    overflow-y: auto;
+    /* optional: falls das Dropdown zu viele Optionen enthält */
+}
+
+.contact-option {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.contact-option:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-color-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+.contact-name {
+    flex-grow: 1;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.contact-checkbox {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+}
+
+.contact-option.selected {
+    background-color: #2a3647;
+    color: white;
+}
+
+.contact-option.selected:hover {
+    background-color: #091931;
+}
+
+/* Container für die zugewiesenen Kontakte */
+.selected-contacts-logos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    gap: 5px;
+}
+
+.selected-contact-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Eingabefeld für Kontaktzuweisung */
+.input-wrapper-contact {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.assigned-to-wrapper {
+    min-height: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.assigned-to-wrapper .selected-contact {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.assigned-to-wrapper .selected-contacts-logos {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+}
